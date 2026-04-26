@@ -76,34 +76,6 @@ function PlayerUsedTitanCore( player )
 			startPlayerFunc = StartDashCore
 			endPlayerFunc = EndDashCore
 			break
-		
-		default:
-			local specialType = player.GetPlayerSettingsField( "footstep_type" )
-			switch ( specialType )
-			{
-				case "core_damage":
-					passive = PAS_FUSION_CORE
-					startSoulFunc = StartDamageCore
-					endSoulFunc = EndDamageCore
-					break
-				
-				case "core_dash":
-					passive = PAS_FUSION_CORE
-					startPlayerFunc = StartDashCore
-					endPlayerFunc = EndDashCore
-					break
-			
-				case "core_defense":
-					passive = PAS_SHIELD_BOOST
-					startSoulFunc = StartShieldCore
-					break
-				
-				default:
-					passive = PAS_FUSION_CORE
-					startSoulFunc = StartDamageCore
-					endSoulFunc = EndDamageCore
-					break
-			}
 	}
 
 	SetCoreEffect( player, CreateChargeEffect )
