@@ -487,8 +487,7 @@ function CoreReadyMessage( player )
 	if ( player.GetDoomedState() )
 		return
 
-	local soul = player.GetTitanSoul()
-	local titanType = GetSoulTitanType( soul )
+	local titanType = player.GetPlayerSettingsField( "footstep_type" )
 
 	switch ( titanType )
 	{
